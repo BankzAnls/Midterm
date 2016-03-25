@@ -1,0 +1,59 @@
+<html ng-app="App">
+<head >
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	<script src="app.js"></script>
+	<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+<title></title>
+</head>
+<body ng-controller="AppListController">
+	<center><h1>HARRY POTTER</h1></center>
+	<div class="container">
+	<div class="row">
+ <div class="s12 m6 l3">
+
+	<div 	ng-repeat="data in books">
+			<img width = "95%" ng-src="./img/{{data.img}}">
+		 <h1>
+		 	{{data.price}} ฿
+		 </h1>
+	 </div>
+	<button ng-click="add(data,$index)">buy</button>
+	</div>
+		</div>
+</div>
+
+
+		ng-repeat="data in choose"
+
+				<img ng-src="./img/{{data.img}}" width = "30%"><br><br>
+			<input type="number" ng-change="disAgain()" min="1" ng-model="data.quantity">
+				{{data.quantity}}
+				<br>
+ ng-show="check"
+
+			จำนวนหนังสือ
+			{{num}} เล่ม
+
+	ng-show="check">
+
+			ราคารวม
+			{{num*100}}
+		 ng-show="check">
+
+			ส่วนลด
+				{{sell}}
+			ng-show="check">
+
+				ยอดเงินที่ต้องชำระ
+				{{num*100-sell}}
+
+	  </div>
+</body>
+
+</html>
