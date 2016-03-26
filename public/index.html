@@ -24,13 +24,13 @@
 			</header>
 			<section class="content">
 				<div id="dummy-grid" class="dummy-grid">
-					<div class="divImg" ng-click="todoList.addBook(1,'Harry Potter เล่ม 1',100)"><img class="size" src="img/1.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(2,'Harry Potter เล่ม 2',100)"><img class="size" src="img/2.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(3,'Harry Potter เล่ม 3',100)"><img class="size" src="img/3.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(4,'Harry Potter เล่ม 4',100)"><img class="size" src="img/4.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(5,'Harry Potter เล่ม 5',100)"><img class="size" src="img/5.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(6,'Harry Potter เล่ม 6',100)"><img class="size" src="img/6.jpg" alt="" /></div>
-					<div class="divImg" ng-click="todoList.addBook(7,'Harry Potter เล่ม 7',100)"><img class="size" src="img/7.jpg" alt="" /></div>
+					<div id="b1" class="divImg" ng-click="todoList.addBook(1,'Harry Potter เล่ม 1',100)"><img class="size" src="img/1.jpg" alt="" /></div>
+					<div id="b2" class="divImg" ng-click="todoList.addBook(2,'Harry Potter เล่ม 2',100)"><img class="size" src="img/2.jpg" alt="" /></div>
+					<div id="b3" class="divImg" ng-click="todoList.addBook(3,'Harry Potter เล่ม 3',100)"><img class="size" src="img/3.jpg" alt="" /></div>
+					<div id="b4" class="divImg" ng-click="todoList.addBook(4,'Harry Potter เล่ม 4',100)"><img class="size" src="img/4.jpg" alt="" /></div>
+					<div id="b5" class="divImg" ng-click="todoList.addBook(5,'Harry Potter เล่ม 5',100)"><img class="size" src="img/5.jpg" alt="" /></div>
+					<div id="b6"class="divImg" ng-click="todoList.addBook(6,'Harry Potter เล่ม 6',100)"><img class="size" src="img/6.jpg" alt="" /></div>
+					<div id="b7" class="divImg" ng-click="todoList.addBook(7,'Harry Potter เล่ม 7',100)"><img class="size" src="img/7.jpg" alt="" /></div>
 				</div>
 			</section>
 
@@ -42,7 +42,7 @@
 					<a class="checkout__button" href="#"><!-- Fallback location -->
 						<span class="checkout__text">
 							<span class="checkout__text-inner checkout__initial-text">Checkout</span>
-							<span class="checkout__text-inner checkout__final-text">$40.70 <i class="fa fa-fw fa-shopping-cart"></i></span>
+							<span class="checkout__text-inner checkout__final-text" >฿ {{todoList.price - todoList.discountTotal}} <i class="fa fa-fw fa-shopping-cart"></i></span>
 						</span>
 					</a>
 					<div class="checkout__order">
@@ -53,8 +53,8 @@
 							    </thead>
 							    <tbody >
 									<tr ng-repeat = "book in todoList.bookSelected"><td>{{book.title}}</td><td>{{book.qty}}</td><td>{{book.qty * book.price}}</td></tr>
-									<tr><th>sum of price</th><th></th><th></th><th>{{todoList.price}}</th></tr>
-									<tr><th>discount</th><th></th><th></th><th>{{todoList.discountTotal}}</th></tr>
+									<tr><th>sum of price</th><th></th><th></th><th >{{todoList.price}}</th></tr>
+									<tr><th>discount</th><th></th><th></th><th id="discountTotal">{{todoList.discountTotal}}</th></tr>
 								</tbody>
 							</table><!-- /checkout__summary -->
 							<button class="checkout__close checkout__cancel"><i class="icon fa fa-fw fa-close"></i>Close</button>
